@@ -1,7 +1,10 @@
 FROM ubuntu:trusty
 
 # libvips version to use
-ENV LIBVIPS_VERSION="8.5.4"
+ENV LIBVIPS_VERSION 8.5.4
+
+# Imaginary version to use
+ENV IMAGINARY_VERSION 0.1.30
 
 # Go version to use
 ENV GOLANG_VERSION 1.8.1
@@ -48,7 +51,12 @@ WORKDIR $GOPATH
 
 # Fetch the latest version of the package
 RUN go get -u golang.org/x/net/context
-RUN go get -u github.com/h2non/imaginary
+
+# Get, pin and install the specific package
+RUN go get -d -u github.com/h2non/imaginary && \
+    cd src/github.com/h2non/imaginary && \
+    git checkout v${IMAGINARY_VERSION} && \
+    go install
 
 # Server port to listen
 ENV PORT 9000
