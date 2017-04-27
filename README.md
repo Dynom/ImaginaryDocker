@@ -7,8 +7,24 @@ Current versions:
 * Imaginary 0.1.30
 * Ubuntu trusty (latest stable)
 
-
 _Note: Higher versions isn't necessarily better! Test the image thoroughly first. There have been several regression problems in the past, in terms of memory leaks in libvips_
+
+# Tags
+* xenial-v1.0.1 (based on Ubuntu Xenial, LTS)
+* trusty-v1.0.1 (based on Ubuntu Trusty)
+
+# Versions
+## v1.0.1
+* Go 1.8.1
+* libvips 8.5.4
+* Imaginary 0.1.30
+* Ubuntu trusty (latest stable)
+
+## v1.0.0
+* Go 1.6
+* libvips 8.5.4
+* Imaginary 0.1.30
+* Ubuntu trusty (latest stable)
 
 # Goals
 * To have more fine-grained control over the versions
