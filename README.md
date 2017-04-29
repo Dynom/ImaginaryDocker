@@ -30,7 +30,7 @@ _Note: Higher versions isn't necessarily better! Test the image thoroughly first
 * To have more fine-grained control over the versions
 
 ## Non goals
-* To build the smallest possible image. Currently the size is around 900MiB, which is enormous. However, significantly reducing it will be a lot of work
+* To build the smallest possible image. Significantly reducing it will be a lot of work to maintain
 * To have a major coverage in version numbers. If you need a specific combination, fork, define and build
 
 
