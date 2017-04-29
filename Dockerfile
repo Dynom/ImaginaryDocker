@@ -15,6 +15,7 @@ RUN \
 
   # Install dependencies
   apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     automake build-essential curl \
     gobject-introspection gtk-doc-tools libglib2.0-dev libjpeg-turbo8-dev libpng12-dev \
@@ -36,27 +37,29 @@ RUN \
   # Build Go, gcc (cgo)
   curl -L -o golang.tar.gz https://golang.org/dl/go${GOLANG_VERSION}.linux-amd64.tar.gz && \
   tar -C /usr/local -xzf golang.tar.gz && \
-  rm golang.tar.gz && \
+  rm -f golang.tar.gz && \
   mkdir -p "${GOPATH}/src" "${GOPATH}/bin" && \
   chmod -R 777 "${GOPATH}" && \
 
-  # Clean up
-  apt-get remove -y curl automake build-essential && \
-  apt-get autoremove -y && \
+  # Get, pin and install the specific package
+  go get -u golang.org/x/net/context && \
+  go get -d -u github.com/h2non/imaginary && \
+  cd ${GOPATH}/src/github.com/h2non/imaginary && \
+  git checkout v${IMAGINARY_VERSION} && \
+  go install && \
+
+  # Cleanup
+  rm -rf ${GOPATH}/src/ && \
+  rm -rf /usr/local/go && \
+  apt-get remove -y curl automake build-essential \
+    gtk-doc-tools libglib2.0-dev libjpeg-turbo8-dev libpng12-dev \
+    libwebp-dev libtiff5-dev libgif-dev libexif-dev libxml2-dev libpoppler-glib-dev \
+    swig libmagickwand-dev libpango1.0-dev libmatio-dev libopenslide-dev libcfitsio3-dev \
+    libgsf-1-dev fftw3-dev liborc-0.4-dev librsvg2-dev \
+    gcc git libc6-dev make && \
   apt-get autoclean && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-WORKDIR $GOPATH
-
-# Fetch the latest version of the package
-RUN go get -u golang.org/x/net/context
-
-# Get, pin and install the specific package
-RUN go get -d -u github.com/h2non/imaginary && \
-    cd src/github.com/h2non/imaginary && \
-    git checkout v${IMAGINARY_VERSION} && \
-    go install
 
 # Server port to listen
 ENV PORT 9000
