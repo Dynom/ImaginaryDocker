@@ -1,3 +1,6 @@
+[![Docker Build Statu](https://img.shields.io/docker/build/dynom/imaginarydocker.svg?style=flat-square)](https://hub.docker.com/r/dynom/imaginarydocker/tags/)  [![Image size](https://images.microbadger.com/badges/image/dynom/imaginarydocker.svg)](https://hub.docker.com/r/dynom/imaginarydocker/tags/)  [![Latest version](https://images.microbadger.com/badges/version/dynom/imaginarydocker.svg)](https://hub.docker.com/r/dynom/imaginarydocker/tags/)
+
+
 # Introduction
 This repository manages a docker image that pins on specific versions of [libvips](https://github.com/jcupitt/libvips) and [Imaginary](https://github.com/h2non/imaginary).
 
@@ -5,11 +8,13 @@ Current versions:
 * Go 1.8.1
 * libvips 8.5.4
 * Imaginary 0.1.30
-* Ubuntu trusty (latest stable)
+* Ubuntu (latest stable releases, look at the Docker image tag's to pick a specific release)
 
 _Note: Higher versions isn't necessarily better! Test the image thoroughly first. There have been several regression problems in the past, in terms of memory leaks in libvips_
 
 # Tags
+For an up-to-date list, see: https://hub.docker.com/r/dynom/imaginarydocker/
+
 * xenial-v1.0.1 (based on Ubuntu Xenial, LTS)
 * trusty-v1.0.1 (based on Ubuntu Trusty)
 
