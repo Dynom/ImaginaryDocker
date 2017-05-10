@@ -10,10 +10,13 @@ Current versions:
 _Note: Higher versions isn't necessarily better! Test the image thoroughly first. There have been several regression problems in the past, in terms of memory leaks in libvips_
 
 # Tags
-* xenial-v1.0.1 (based on Ubuntu Xenial, LTS)
-* trusty-v1.0.1 (based on Ubuntu Trusty)
+* xenial-v1.0.2 (based on Ubuntu Xenial, LTS)
+* trusty-v1.0.2 (based on Ubuntu Trusty)
 
 # Versions
+## v1.0.2
+* Same as v1.0.1, but changed the build to produce a smaller images size.
+
 ## v1.0.1
 * Go 1.8.1
 * libvips 8.5.4
