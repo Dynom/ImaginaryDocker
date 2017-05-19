@@ -16,7 +16,7 @@ _Note: Higher versions isn't necessarily better! Test the image thoroughly first
 For an up-to-date list, see: https://hub.docker.com/r/dynom/imaginarydocker/
 
 * xenial-v1.0.3 (based on Ubuntu Xenial, LTS)
-* trusty-v1.0.2 (based on Ubuntu Trusty)
+* trusty-v1.0.3 (based on Ubuntu Trusty)
 
 # Versions
 ## v1.0.3
