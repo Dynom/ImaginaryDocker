@@ -58,3 +58,5 @@ Usage:
   imaginary -concurrency 10
   ...
 ```
+
+_Note: If you specify a different port, be sure to set it as an environmental variable. The Dockerfile defines a `PORT` that takes precedence over Imaginary's `-p` flag._
