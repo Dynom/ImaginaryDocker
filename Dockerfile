@@ -1,10 +1,10 @@
 FROM ubuntu:xenial
 
 # libvips version to use
-ENV LIBVIPS_VERSION 8.5.5
+ENV LIBVIPS_VERSION 8.5.6
 
 # Imaginary version to use
-ENV IMAGINARY_VERSION 1.0.0
+ENV IMAGINARY_VERSION 1.0.2
 
 # Go version to use
 ENV GOLANG_VERSION 1.8.3
