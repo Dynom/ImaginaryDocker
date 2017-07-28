@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:trusty
 
 # libvips version to use
 ENV LIBVIPS_VERSION 8.5.6
