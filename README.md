@@ -5,9 +5,9 @@
 This repository manages a docker image that pins on specific versions of [libvips](https://github.com/jcupitt/libvips) and [Imaginary](https://github.com/h2non/imaginary).
 
 Current versions:
-* Go 1.8.3
-* libvips 8.5.6
-* Imaginary 1.0.2 (bimg v1.0.10)
+* Go 1.9.1
+* libvips 8.5.9
+* Imaginary 1.0.8
 * Ubuntu (latest stable releases, look at the Docker image tag's to pick a specific release)
 
 _Note: Higher versions isn't necessarily better! Test the image thoroughly first. There have been several regression problems in the past, in terms of memory leaks in libvips_
@@ -15,10 +15,14 @@ _Note: Higher versions isn't necessarily better! Test the image thoroughly first
 # Tags
 For an up-to-date list, see: https://hub.docker.com/r/dynom/imaginarydocker/
 
-* xenial-v1.0.5 (based on Ubuntu Xenial, LTS)
-* trusty-v1.0.5 (based on Ubuntu Trusty)
+* xenial-v0.0.0 (based on Ubuntu Xenial, LTS)
+* trusty-v0.0.0 (based on Ubuntu Trusty)
 
 # Versions
+## v1.0.6
+* Updated Imaginary to 1.0.8 (bimg v1.0.13)
+* Updated libvips to 8.5.9
+
 ## v1.0.5
 * Updated Imaginary to 1.0.2 (bimg v1.0.10)
 * Updated libvips to 8.5.6
