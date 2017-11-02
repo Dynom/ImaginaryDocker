@@ -4,10 +4,10 @@ FROM ubuntu:xenial
 ENV LIBVIPS_VERSION 8.5.9
 
 # Imaginary version to use
-ENV IMAGINARY_VERSION 1.0.8
+ENV IMAGINARY_VERSION 1.0.10
 
 # Go version to use
-ENV GOLANG_VERSION 1.9.1
+ENV GOLANG_VERSION 1.9.2
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
