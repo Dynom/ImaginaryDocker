@@ -18,7 +18,14 @@ For an up-to-date list, see: https://hub.docker.com/r/dynom/imaginarydocker/
 * xenial-v0.0.0 (based on Ubuntu Xenial, LTS)
 * trusty-v0.0.0 (based on Ubuntu Trusty)
 
+_As of version 1.0.10, the version numbers correspond with the version of Imaginary._
+
 # Versions
+## v1.0.10
+* Updated Imaginary to 1.0.10 (bimg v1.0.16)
+* Updated libvips to 8.5.9
+* Version numbers of ImaginaryDocker now correspond with Imaginary's versioning
+
 ## v1.0.6
 * Updated Imaginary to 1.0.8 (bimg v1.0.13)
 * Updated libvips to 8.5.9
