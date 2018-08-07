@@ -1,13 +1,13 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 
 # libvips version to use
-ENV LIBVIPS_VERSION 8.5.9
+ENV LIBVIPS_VERSION 8.6.5
 
 # Imaginary version to use
-ENV IMAGINARY_VERSION 1.0.10
+ENV IMAGINARY_VERSION 1.0.14
 
 # Go version to use
-ENV GOLANG_VERSION 1.9.2
+ENV GOLANG_VERSION 1.10.3
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
 
