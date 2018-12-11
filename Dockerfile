@@ -1,7 +1,7 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 
 # libvips version to use
-ENV LIBVIPS_VERSION 8.7.0
+ENV LIBVIPS_VERSION 8.7.2
 
 # Imaginary version to use
 ENV IMAGINARY_VERSION 1.0.15
@@ -26,7 +26,7 @@ RUN \
 
   # Build libvips
   cd /tmp && \
-  curl -OL https://github.com/jcupitt/libvips/releases/download/v${LIBVIPS_VERSION}/vips-${LIBVIPS_VERSION}.tar.gz && \
+  curl -OL https://github.com/libvips/libvips/releases/download/v${LIBVIPS_VERSION}/vips-${LIBVIPS_VERSION}.tar.gz && \
   tar zvxf vips-${LIBVIPS_VERSION}.tar.gz && \
   cd /tmp/vips-${LIBVIPS_VERSION} && \
   ./configure --enable-debug=no --without-python $1 && \
