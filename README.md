@@ -5,9 +5,9 @@
 This repository manages a docker image that pins on specific versions of [libvips](https://github.com/jcupitt/libvips) and [Imaginary](https://github.com/h2non/imaginary).
 
 Current versions:
-* Go 1.10.3
-* libvips 8.6.5
-* Imaginary 1.0.14
+* Go 1.11.2
+* libvips 8.7.2
+* Imaginary 1.0.15
 * Ubuntu (latest stable releases, look at the Docker image tag's to pick a specific release)
 
 _Note: Higher versions isn't necessarily better! Test the image thoroughly first. There have been several regression problems in the past, in terms of memory leaks in libvips_
@@ -22,6 +22,11 @@ _As of version 1.0.10, the version numbers correspond with the version of Imagin
 
 
 # Versions
+## v1.0.15
+* Updated Imaginary to 1.0.15 (bimg v1.0.19)
+* Updated libvips to 8.7.2
+* Build with Go 1.11.2
+
 ## v1.0.14
 * Updated Imaginary to 1.0.14 (bimg v1.0.18)
 * Updated libvips to 8.6.5
